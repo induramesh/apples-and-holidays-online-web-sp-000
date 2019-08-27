@@ -66,28 +66,28 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each { |k,v| 
     #season
-    print k.to_s.capitalize + ":"
-    print "\n"
+    puts k.to_s.capitalize + ":"
+    puts "\n"
     
     #holiday
     v.each do |k,v| 
-      print "  "
+      puts "  "
       if k.to_s.include?("_")
-        print k.to_s.split("_").map {|s| s.capitalize}.join(" ") + ": "
+        puts k.to_s.split("_").map {|s| s.capitalize}.join(" ") + ": "
       else
-        print k.to_s.capitalize + ": "
+        puts k.to_s.capitalize + ": "
       end 
       
       #supplies
       i = 0 
       while (i < v.length) do 
-        print v[i]
+        puts v[i]
         if i < v.length - 1
-          print ", "
+          puts ", "
         end 
         i += 1
       end 
-      print "\n"
+      puts "\n"
     end 
   
   }
