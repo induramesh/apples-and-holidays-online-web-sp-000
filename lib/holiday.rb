@@ -67,7 +67,6 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each { |k,v| 
     #season
     puts k.to_s.capitalize + ":"
-    #puts "\n"
     
     #holiday
     v.each do |k,v| 
@@ -80,8 +79,9 @@ def all_supplies_in_holidays(holiday_hash)
       
       #supplies
       i = 0 
+      s = ""
       while (i < v.length) do 
-        puts v[i]
+        puts v[i] + ", "
         if i < v.length - 1
           puts ", "
         end 
