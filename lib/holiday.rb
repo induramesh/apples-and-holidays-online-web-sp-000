@@ -81,13 +81,13 @@ def all_supplies_in_holidays(holiday_hash)
       i = 0 
       s = ""
       while (i < v.length) do 
-        puts v[i] + ", "
+        s += v[i] 
         if i < v.length - 1
-          puts ", "
+          s += ", "
         end 
         i += 1
       end 
-      puts "\n"
+      puts s
     end 
   
   }
