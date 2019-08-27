@@ -56,7 +56,7 @@ def all_winter_holiday_supplies(holiday_hash)
 
 end
 
-def all_supplies_in_holidays(holiday_hash)
+  def all_supplies_in_holidays(holiday_hash)
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
   #   Christmas: Lights, Wreath
@@ -71,11 +71,6 @@ def all_supplies_in_holidays(holiday_hash)
     #holiday
     v.each do |k,v| 
       #puts "  "
-      if k.to_s.include?("_")
-        puts "  " + k.to_s.split("_").map {|s| s.capitalize}.join(" ") + ": "
-      else
-        puts "  " + k.to_s.capitalize + ": "
-      end 
       
       #supplies
       i = 0 
@@ -87,7 +82,13 @@ def all_supplies_in_holidays(holiday_hash)
         end 
         i += 1
       end 
-      puts s
+      
+      #print supplies next to holiday 
+       if k.to_s.include?("_")
+        puts "  " + k.to_s.split("_").map {|s| s.capitalize}.join(" ") + ": " + s
+      else
+        puts "  " + k.to_s.capitalize + ": " + s
+      end 
     end 
   
   }
